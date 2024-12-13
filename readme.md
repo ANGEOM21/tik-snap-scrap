@@ -110,7 +110,7 @@ Anda juga dapat menggunakan Postman atau alat serupa untuk mengirim permintaan P
 
 ## License
 
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](license) untuk detail lebih lanjut.
 
 ```
 
