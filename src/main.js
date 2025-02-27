@@ -13,17 +13,17 @@ app.get("/", async (req, res) => {
 	});
 });
 
-app.get("/api/tik-vid/:url", async (req, res) => {
-	const { url } = req.params;
-	if (!url) {
-		return res.status(400).json({ error: "URL is required" });
-	}
-	try {
-		const result = await client.process(url);
-		res.json(result);
-	} catch (error) {
-		res.status(500).json({ error: error.message });
-	}
+app.get("/api/tik-vid", async (req, res) => {
+    const { url } = req.query;
+    if (!url) {
+        return res.status(400).json({ error: "URL is required" });
+    }
+    try {
+        const result = await client.process(url);
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 app.listen(port, () => {
