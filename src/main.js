@@ -13,8 +13,8 @@ app.get("/", async (req, res) => {
 	});
 });
 
-app.post("/api", async (req, res) => {
-	const { url } = req.body;
+app.get("/api/tik-vid/:url", async (req, res) => {
+	const { url } = req.params;
 	if (!url) {
 		return res.status(400).json({ error: "URL is required" });
 	}
