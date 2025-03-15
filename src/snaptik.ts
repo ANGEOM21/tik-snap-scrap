@@ -49,6 +49,7 @@ const getScript = async (
   return data;
 };
 
+// Algorithm to evaluate the script
 const evalScript = async (
   script1: string
 ): Promise<{ html: string; oembed_url: string }> => {
@@ -107,6 +108,7 @@ const evalScript = async (
   });
 };
 
+// get HD video
 const getHdVideo = async (
   axiosInstance: AxiosInstance,
   token: string
