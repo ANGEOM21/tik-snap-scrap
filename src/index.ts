@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 5000;
 const APP_URL = process.env.APP_URL || "http://localhost";
 // const __dirname = path.resolve();
 
-app.use(express.json(), cors());
+app.use(cors());
+app.use(express.json());
 
 // app.get("/", (req, res) => {
 // 	res.json({	
@@ -20,7 +21,7 @@ app.use(express.json(), cors());
 // 	});
 // });
 
-app.post("/api", async (req, res) => {
+app.post("/api/tik-tok", async (req, res) => {
 	try {
 		const { url } = req.body;
 		const result = await processUrl(url);
